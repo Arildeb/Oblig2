@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Oblig 2</title>
+		<link href="artikkel.css" rel="stylesheet" />
+		<script type="text/javascript" async
+	 			 src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML">
+		</script>
+	</head>
+	<body>
+		<div class="grid">
+			<header>
+					<h1>Grid example 2</h1>
+	        	<nav role="navigation" id="main-nav">
+		            <ul>
+		              <li><a href="index.html">Hjem</a></li>
+		              <li><a href="timeplan.html">Timeplan</a></li>
+		              <li><a href="table.html">Om denne siden</a></li>
+		            </ul>
+				</nav>
+			</header>
+		<main class="main-wrapper">
+				<article class="box">
+					<h2>MathML</h2>
+					<p>MathML(Matematical Markup Language) ble designet for å dekke to formål, en for å strukturere matematiske uttrykk og for å presentere disse utrykkene, i MathML så må man lage tagger for alt man skal sette inn.<br/> Dette er bra med tanke på
+					at man kan lage formelene rett i HTML-dokumentet istedet for å lage alt som bilder for så å legge det inn i dokumentet.
+					<br/><br/>
+					<xmp><mi> --- </mi></xmp><p>er identifier, eller en verdi (feks. X) </p> <br/>
+					<xmp><mo> --- </mo></xmp><p> er operator (feks = / - + () )</p><br/>
+					<xmp><mn> --- </mn></xmp> <p>er tall (feks 1 2 3 4)</p><br/>
+					<xmp><mrow> --- </mrow></xmp> <p>ordner innholdet på en rad</p><br/>
+					<xmp><msqrt> --- </msqrt></xmp><p> er koden for kvadratrot</p><br/>
+					<xmp><mfenced> --- </mfenced></xmp> <p>brukes for å sette ting inne i en parantes</p><br/>
+					<xmp><msup> --- </msup></xmp><p> er eksponering, eller opphøyd i</p><br/><br/>
+					<p>En enkel algebra formel</p><br/>
+					<math style="font-size:20px">
+						<mi>X</mi>
+						<mo>=</mo>
+						<mfenced>
+							<mrow>
+								<mi>y</mi>
+								<mo>+</mo>
+								<mn>4</mn>
+							</mrow>
+						</mfenced>
+					</math><br/><br/><br/>
+					<p>Areal på en sirkel</p>
+					<math style="font-size:20px">
+						<mi>A</mi>
+						<mo>=</mo>
+						<mi>&#x3C0;</mi>
+						<mo>&#xB7;</mo>
+						<msup>
+							<mi>r</mi>
+							<mn>2</mn>
+						</msup>
+					</math><br/><br/>
+					<p>Her ser man en grafisk fremstilling av en formel kalt ABC-formelen</p>
+					<math style="font-size:20px">
+						<mi>X</mi>
+						<mo>=</mo>
+						<mfrac>
+							<mrow>
+								<mo>-</mo>
+								<mi>b</mi>
+								<mo>&#xB1;</mo>
+								<msqrt>
+									<msup>
+										<mi>b</mi>
+										<mn>2</mn>
+									</msup>
+									<mo>-</mo>
+									<mn>4</mn>
+									<mi>a</mi>
+									<mi>c</mi>
+								</msqrt>
+							</mrow>
+							<mrow>
+								<mn>2</mn>
+								<mi>a</mi>
+							</mrow>
+						</mfrac>
+					</math>
+
+
+
+				</article>
+				
+		</main>
+
+			<footer>
+					<p>Arild Bakken . All rights reserved. &copy;2017 <a href="table.html">Om denne siden</a></p>
+			</footer>
+		</div>
+	</body>
+</html>

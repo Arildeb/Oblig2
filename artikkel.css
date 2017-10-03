@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Inconsolata', serif;
+}
+
+body {
+	font-size: 14px;
+	background: #ededed;
+}
+
+/* Grid */
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid {
+	width: 100%;
+	max-width: 1080px;
+	margin: 20px auto;
+	padding: 15px;
+	background: #fff;
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-areas: 	"header header header"
+							"navi navi navi"
+							"content content content"
+              				"content content content"
+							"footer footer footer";
+	grid-template-columns:1fr 5fr 2fr;
+	grid-template-rows: 1fr;
+}
+
+/* Wrappers */
+.article-grid-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.main-wrapper {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-gap: 15px;
+	width: 100%;
+	padding: 15px 0;
+}
+
+/* Grid posisjonering */
+header { grid-area: header; }
+nav#main-nav { grid-area: navi; }
+main { grid-area: content; }
+footer { grid-area: footer; }
+
+/* Styling */
+header, footer {
+	position: relative;
+ 	border-radius:10px;
+	background: #f3f3f3; 
+  	border: 1px solid #ccc;
+	padding: 20px;
+	color: black;
+  
+}
+/* Navigasjon */
+nav {
+  	border-radius:7px;
+  	display:flex;
+	background: #3a5072; 
+	padding: 5px 0;
+	color: white;
+}
+nav a{
+	background: #ededed; 
+	padding: 5px 10px 5px;
+	color: white;
+}
+	nav#main-nav ul {
+		list-style-type: none;
+		margin: 0;
+
+	}
+		nav#main-nav ul li {
+			float: left;
+			display: block;
+			width: auto;
+			text-transform: uppercase;
+		}
+			nav#main-nav ul li a, a:visited {
+				text-decoration: none;
+				font-size: 20px;
+        		background: #3a5072; 
+			}
+
+		    nav#main-nav ul li a:hover {
+		        color:#28ba41;
+		    }
+		    nav#main-nav ul li a:active {
+		        color:#28ba41;
+		    }
+article.box {
+  	border-radius:10px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: #f3f3f3;
+}
+/* Ikon etter link */
+.ico{
+    width:100px;
+    height:20px;
+    color:black;
+    text-decoration:none;
+}
+
+.ico:after{
+    content: '';
+    background:url('icon.png');
+    background-size:cover;
+    position:absolute;
+    width:9px;
+    height:9px;
+    margin-left:-1px;
+}
+article a.ico {
+	text-decoration: underline;
+}
+article a.ico:hover {
+	text-decoration: underline;
+	       color:#28ba41;
+}
+/* Footer link styling */
+footer a {
+		position: absolute;
+		bottom:5px;
+		right:5px;
+		float:right;
+        border-radius:7px;
+        text-decoration: none;
+        background: #3a5072; 
+        color:white;
+  		padding: 10px;
+  
+			}
+footer a:hover {
+		float:right;
+        border-radius:7px;
+        color:#28ba41;
+        padding: 10px;
+}
+footer a:active {
+		float:right;
+        border-radius:7px;
+        color:#28ba41;
+        padding: 10px;
+}
+table#inspir {
+    font-size:16px;
+    font-family: "Inconsolata", serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#inspir td, #inspir th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+#inspir tr:nth-child(odd){
+  background-color: white;
+  color:black
+}
+#inspir tr {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #3a5072;
+    color: white;
+}
+#blabak a {
+	text-decoration: none;
+	color:white;
+}
+#blabak a:hover {
+	color:#28ba41;
+}
+#hvitbak a {
+	text-decoration: none;
+	color:black;
+}
+#hvitbak a:hover {
+	color:#28ba41;
+}
+article #kalender {
+	display:flex;
+	margin: 20px auto;
+}

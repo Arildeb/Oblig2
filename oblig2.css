@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Inconsolata', serif;
+}
+
+body {
+	font-size: 14px;
+	background: #ededed;
+}
+
+/* Grid */
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid {
+	width: 100%;
+	max-width: 1080px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #fff;
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-areas: 	"header header header"
+							"navi navi navi"
+							"content content oblig"
+              				"content content oblig"
+							"footer footer footer";
+	grid-template-columns:1fr 5fr 2fr;
+	grid-template-rows: auto;
+}
+
+/* Wrappers */
+.article-grid-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.main-wrapper {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 15px;
+	width: 98%;
+	padding: 15px 0;
+}
+
+/* Grid posisjonering */
+header { grid-area: header; }
+nav#main-nav { grid-area: navi; }
+main { grid-area: content; }
+div#oblig { grid-area: oblig; }
+footer { grid-area: footer; }
+
+/* Styling */
+header, footer {
+	position: relative;
+ 	border-radius:10px;
+	background: #f3f3f3; 
+  	border: 1px solid #ccc;
+	padding: 20px;
+	color: black;
+  
+}
+/* Navigasjon */
+nav {
+  	border-radius:7px;
+  	display:flex;
+	background: #3a5072; 
+	padding: 5px 0;
+	color: white;
+}
+nav a{
+	background: #ededed; 
+	padding: 5px 10px 5px;
+	color: white;
+}
+	nav#main-nav ul {
+		list-style-type: none;
+		margin: 0;
+
+	}
+		nav#main-nav ul li {
+			float: left;
+			display: block;
+			width: auto;
+			text-transform: uppercase;
+		}
+			nav#main-nav ul li a, a:visited {
+				text-decoration: none;
+				font-size: 20px;
+        		background: #3a5072; 
+			}
+
+		    nav#main-nav ul li a:hover {
+		        color:#28ba41;
+		    }
+		    nav#main-nav ul li a:active {
+		        color:#28ba41;
+		    }
+/* Oblig frister styling */
+div#oblig {
+	border-radius:10px;
+	text-align:center;
+	background: #f3f3f3;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 15px 1px;
+}
+div#oblig #fullfort {
+	border-radius:7px;
+	background: #64d149;
+	border: 1px solid #ccc;
+	padding: 2px 10px;
+	margin:5px;
+}
+div#oblig #underarb {
+	border-radius:7px;
+	background: #f7ff54;
+ 	border: 1px solid #ccc;
+	padding: 2px 10px;
+	margin:5px;
+}
+div#oblig #ikkeutfort {
+  	border-radius:7px;
+	background: #f70c0c;
+  	border: 1px solid #ccc;
+  	padding: 2px 10px;
+  	margin:5px;
+}
+/* Artikkel styling */
+article.box {
+	position: relative;
+  	border-radius:10px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	background: #f3f3f3;
+}
+	.box a, a:visited{
+		position: absolute;
+		bottom:5px;
+		right:5px;
+		float:right;
+    	border-radius:7px;
+		background: #3a5072;
+		color: white;
+    	text-decoration:none;
+		padding: 10px;
+	}
+
+	.box a:hover{
+		border-radius:7px;
+		background: #3a5072;
+		color: #28ba41;
+    	text-decoration:none;
+		padding: 10px;
+	}
+	.box a:active{
+		border-radius:7px;
+		background: #3a5072;
+		color: #28ba41;
+    	text-decoration:none;
+		padding: 10px;
+	}
+/* Ikon etter link */
+.ico{
+    width:100px;
+    height:20px;
+    color:black;
+    text-decoration:none;
+}
+
+.ico:after{
+    content: '';
+    background:url('icon.png');
+    background-size:cover;
+    position:absolute;
+    width:9px;
+    height:9px;
+    margin-left:-1px;
+}
+article a.ico {
+	text-decoration: underline;
+}
+article a.ico:hover {
+	text-decoration: underline;
+	       color:#28ba41;
+}
+/* Footer link styling */
+footer a {
+		position: absolute;
+		bottom:5px;
+		right:5px;
+		float:right;
+        border-radius:7px;
+        text-decoration: none;
+        background: #3a5072; 
+        color:white;
+  		padding: 10px;
+  
+			}
+footer a:hover {
+		float:right;
+        border-radius:7px;
+        color:#28ba41;
+        padding: 10px;
+}
+footer a:active {
+		float:right;
+        border-radius:7px;
+        color:#28ba41;
+        padding: 10px;
+}
